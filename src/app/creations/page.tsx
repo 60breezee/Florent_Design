@@ -43,6 +43,72 @@ const creations = [
     image: "/visuals/ui-5.png",
     tags: ["Réseaux", "Digital", "Kit"],
   },
+  {
+    id: "7",
+    title: "Dashboard — Scanner de vulnérabilités",
+    image: "/visuals/proj-scanner-vuln.jpg",
+    tags: ["UI/UX", "Dashboard", "Cybersécurité"],
+  },
+  {
+    id: "8",
+    title: "Site — Parc informatique",
+    image: "/visuals/proj-parc-info.jpg",
+    tags: ["UI/UX", "Web App", "IT"],
+  },
+  {
+    id: "9",
+    title: "Landing page — Lambda Lions",
+    image: "/visuals/proj-lambda-lions.jpg",
+    tags: ["Landing Page", "Branding", "Web"],
+  },
+  {
+    id: "10",
+    title: "Site hôtelier — Flo Hôtel",
+    image: "/visuals/proj-flo-hotel.jpg",
+    tags: ["UI/UX", "Hôtellerie", "Web"],
+  },
+  {
+    id: "11",
+    title: "Affiche — Académie",
+    image: "/visuals/ACADEMIE.png",
+    tags: ["Affiche", "Événementiel", "Print"],
+  },
+  {
+    id: "12",
+    title: "Création — All Black",
+    image: "/visuals/all-black.png",
+    tags: ["Création", "Mode", "Branding"],
+  },
+  {
+    id: "13",
+    title: "Affiche culturelle",
+    image: "/visuals/culturelle.png",
+    tags: ["Affiche", "Culture", "Print"],
+  },
+  {
+    id: "14",
+    title: "Affiche — Eco Jogging",
+    image: "/visuals/eco-jogging.png",
+    tags: ["Affiche", "Sport", "Événementiel"],
+  },
+  {
+    id: "15",
+    title: "Packaging — Jus",
+    image: "/visuals/jus.png",
+    tags: ["Packaging", "Produit", "Création"],
+  },
+  {
+    id: "16",
+    title: "Création — We",
+    image: "/visuals/we.png",
+    tags: ["Création", "Branding", "Digital"],
+  },
+  {
+    id: "17",
+    title: "Webinaire — Communication",
+    image: "/visuals/webinaire.png",
+    tags: ["Communication", "Digital", "Événementiel"],
+  },
 ]
 
 const containerVariants = {
