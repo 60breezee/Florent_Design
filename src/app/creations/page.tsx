@@ -44,30 +44,6 @@ const creations = [
     tags: ["Réseaux", "Digital", "Kit"],
   },
   {
-    id: "7",
-    title: "Dashboard — Scanner de vulnérabilités",
-    image: "/visuals/proj-scanner-vuln.jpg",
-    tags: ["UI/UX", "Dashboard", "Cybersécurité"],
-  },
-  {
-    id: "8",
-    title: "Site — Parc informatique",
-    image: "/visuals/proj-parc-info.jpg",
-    tags: ["UI/UX", "Web App", "IT"],
-  },
-  {
-    id: "9",
-    title: "Landing page — Lambda Lions",
-    image: "/visuals/proj-lambda-lions.jpg",
-    tags: ["Landing Page", "Branding", "Web"],
-  },
-  {
-    id: "10",
-    title: "Site hôtelier — Flo Hôtel",
-    image: "/visuals/proj-flo-hotel.jpg",
-    tags: ["UI/UX", "Hôtellerie", "Web"],
-  },
-  {
     id: "11",
     title: "Affiche — Académie",
     image: "/visuals/ACADEMIE.png",
