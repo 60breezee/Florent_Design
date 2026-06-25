@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #f0f0f0;
+  --foreground: #0a0a0a;
+  --font-display: "Outfit", sans-serif;
+  --font-sans: "Inter Tight", sans-serif;
+  --book-edge: rgba(255, 255, 255, 0.75);
+  --book-edge-shadow: rgba(0, 0, 0, 0.18);
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0c0c0f;
+  --foreground: #f5f5f7;
+  --book-edge: rgba(0, 0, 0, 0.7);
+  --book-edge-shadow: rgba(0, 0, 0, 0.45);
+  --color-hightlight-light: #1a1b2d;
+  --color-accent-light: #13221c;
+  --color-primary-light: #35222c;
+  --color-secondary-light: #2e2b17;
+  --color-primary: #ff5d9e;
+  --color-primary-foreground: #0a0a0a;
+  --color-secondary: #f7e27e;
+  --color-secondary-foreground: #0a0a0a;
+  --color-accent: #3fbf8f;
+  --color-accent-foreground: #0a0a0a;
+  --color-neutral: #0a0a0a;
+  --color-neutral-foreground: #f5f5f7;
+  --color-base-100: #0c0c0f;
+  --color-base-200: #13131a;
+  --color-base-300: #1a1a24;
+  --color-base-content: #f5f5f7;
+  --color-info: #4aa6f4;
+  --color-success: #48d1a0;
+  --color-warning: #f6c66b;
+  --color-error: #ff6b6b;
+  --color-highlight: #7b7bff;
+  --color-muted: #1a1a24;
+  --color-muted-foreground: #b8b8c7;
+  --color-border: #2a2a36;
+  --color-input: #2a2a36;
+  --color-ring: #ff5d9e;
+  --color-card: #13131a;
+  --color-card-foreground: #f5f5f7;
+  --color-popover: #13131a;
+  --color-popover-foreground: #f5f5f7;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-hightlight-light: #dadbf8;
+  --color-accent-light: #d9eae3;
+  --color-primary-light: #ffcfe1;
+  --color-secondary-light: #fffce5;
+  --color-primary: #ff0f67;
+  --color-primary-foreground: #fff;
+  --color-secondary: #fff07c;
+  --color-secondary-foreground: #0a0a0a;
+  --color-accent: #439775;
+  --color-accent-foreground: #0a0a0a;
+  --color-neutral: #222222;
+  --color-neutral-foreground: #ffffff;
+  --color-base-100: #f0f0f0;
+  --color-base-200: #ffffff;
+  --color-base-300: #f2f2f2;
+  --color-base-content: #0a0a0a;
+  --color-info: #3abff8;
+  --color-success: #36d399;
+  --color-warning: #fbbd23;
+  --color-error: #f87272;
+  --color-highlight: #454ade;
+  --color-muted: #f2f2f2;
+  --color-muted-foreground: #6b6b6b;
+  --color-border: #e5e5e5;
+  --color-input: #e5e5e5;
+  --color-ring: #ff0f67;
+  --color-card: #ffffff;
+  --color-card-foreground: #0a0a0a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a0a0a;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes orbit-carousel {
+  from {
+    transform: translate(-50%, -50%) rotate(var(--start-angle)) translateX(var(--orbit-radius));
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(calc(var(--start-angle) + 1turn)) translateX(var(--orbit-radius));
+  }
+}
+
+@keyframes orbit-card-counter {
+  from {
+    transform: rotate(calc(var(--card-rotation) - var(--start-angle)));
+  }
+  to {
+    transform: rotate(calc(var(--card-rotation) - var(--start-angle) - 1turn));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

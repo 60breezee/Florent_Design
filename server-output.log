@@ -1,0 +1,42 @@
+
+> portfolio-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.137.1:3000
+
+✓ Starting...
+✓ Ready in 6.5s
+○ Compiling / ...
+ GET / 200 in 16.3s (compile: 12.2s, render: 4.1s)
+ GET / 200 in 1297ms (compile: 709ms, render: 588ms)
+ GET / 200 in 1315ms (compile: 37ms, render: 1278ms)
+✓ Compiled in 20.7s
+ GET / 200 in 20.9s (compile: 13.8s, render: 7.1s)
+○ Compiling /creations ...
+✓ Finished writing to filesystem cache in 27.0s
+ GET /creations 200 in 3.8min (compile: 3.3min, render: 31.1s)
+✓ Finished writing to filesystem cache in 47s
+✓ Finished filesystem cache database compaction in 21.6s
+✓ Finished writing to filesystem cache in 26.7s
+✓ Finished filesystem cache database compaction in 15.3s
+ GET / 200 in 1651ms (compile: 1047ms, render: 604ms)
+ GET /creations 200 in 3.1min (compile: 43s, render: 2.4min)
+✓ Finished writing to filesystem cache in 10.4s
+ GET / 200 in 1311ms (compile: 60ms, render: 1252ms)
+✓ Finished writing to filesystem cache in 42s
+ GET /creations 200 in 25.8s (compile: 8.8s, render: 17.0s)
+ GET / 200 in 2.0s (compile: 1145ms, render: 873ms)
+✓ Finished writing to filesystem cache in 15.3s
+✓ Compiled in 74.9s
+✓ Finished writing to filesystem cache in 12.5s
+✓ Compiled in 42.2s
+✓ Compiled in 28.9s
+✓ Compiled in 20.2s
+✓ Compiled in 22.3s
+✓ Compiled in 17.5s
+ GET /creations 200 in 96s (compile: 49s, render: 47s)
+✓ Compiled in 6.4s
+ GET / 200 in 779ms (compile: 270ms, render: 510ms)
+✓ Compiled in 60.6s

@@ -1,0 +1,19 @@
+
+> portfolio-app@0.1.0 dev
+> next dev --hostname 127.0.0.1
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+✓ Ready in 5.2s
+○ Compiling / ...
+ GET / 200 in 693ms (compile: 135ms, render: 558ms)
+✓ Finished writing to filesystem cache in 2.1min
+✓ Finished filesystem cache database compaction in 59s
