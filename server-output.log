@@ -40,3 +40,4 @@
 ✓ Compiled in 6.4s
  GET / 200 in 779ms (compile: 270ms, render: 510ms)
 ✓ Compiled in 60.6s
+✓ Finished filesystem cache database compaction in 14.1s
