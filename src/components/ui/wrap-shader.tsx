@@ -13,7 +13,7 @@ export default function WarpShaderHero() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative min-h-dvh overflow-hidden">
       <div className="absolute inset-0">
         <Warp
           style={{ height: "100%", width: "100%" }}
@@ -57,7 +57,7 @@ export default function WarpShaderHero() {
             <button
               type="button"
               onClick={() => scrollToSection("contact")}
-              className="rounded-full bg-white px-8 py-4 font-medium text-gray-800 transition-transform duration-300 hover:scale-105"
+              className="rounded-full border border-white/30 bg-white/20 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/30"
             >
               Me contacter
             </button>
