@@ -10,8 +10,15 @@ import {
   Linkedin,
   Mail,
   MessageCircle,
+  Palette,
+  Pen,
+  RefreshCw,
+  Search,
   Sparkles,
   Twitter,
+  Layout,
+  Package,
+  Rocket,
 } from "lucide-react"
 import { AnimeNavBar } from "@/components/ui/anime-navbar"
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
@@ -181,7 +188,40 @@ export default function Home() {
         </div>
       </BookSection>
 
-      <BookSection id="skills" className="relative py-24 px-6 bg-base-200" flipFrom="left">
+      <BookSection id="services" className="relative py-32 px-6" flipFrom="right">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="space-y-6">
+            <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">
+              Mes services
+            </p>
+            <h2 className="text-5xl md:text-7xl font-display font-semibold">
+              Ce que je vous propose
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12">
+            {[
+              { title: "Identité visuelle", desc: "Logos, chartes graphiques, univers de marque." },
+              { title: "Logo Design", desc: "Création de logos uniques et mémorables." },
+              { title: "Branding", desc: "Stratégie de marque et positionnement visuel." },
+              { title: "Affiches", desc: "Affiches événementielles, culturelles et publicitaires." },
+              { title: "Réseaux sociaux", desc: "Visuels pour vos campagnes social media." },
+              { title: "Packaging", desc: "Design d'emballages et mockups produits." },
+              { title: "Motion Design", desc: "Animations graphiques et vidéo." },
+            ].map((service) => (
+              <div key={service.title} className="space-y-3">
+                <h3 className="text-3xl md:text-4xl font-display font-semibold">
+                  {service.title}
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {service.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </BookSection>
+
+      <BookSection id="skills" className="relative py-32 px-6 bg-base-200" flipFrom="left">
         <AnimatedGridPattern
           numSquares={40}
           maxOpacity={0.12}
@@ -205,6 +245,8 @@ export default function Home() {
                 "InDesign",
                 "Figma",
                 "Canva",
+                "After Effects",
+                "Blender",
               ].map((item) => (
                 <span
                   key={item}
@@ -226,12 +268,53 @@ export default function Home() {
                 "canva",
                 "blender",
                 "aftereffects",
-                "lightroom",
                 "procreate",
                 "sketch",
                 "notion",
               ]}
             />
+          </div>
+        </div>
+      </BookSection>
+
+      <BookSection id="process" className="relative py-32 px-6" flipFrom="right">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="space-y-6">
+            <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">
+              Mon processus
+            </p>
+            <h2 className="text-5xl md:text-7xl font-display font-semibold">
+              Comment je travaille
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+            {[
+              { step: "01", title: "Découverte", icon: Search, desc: "Analyse du brief et des objectifs." },
+              { step: "02", title: "Recherche", icon: Palette, desc: "Inspiration, tendances & références." },
+              { step: "03", title: "Moodboard", icon: Layout, desc: "Direction artistique et univers visuel." },
+              { step: "04", title: "Croquis", icon: Pen, desc: "Premières pistes et explorations." },
+              { step: "05", title: "Design", icon: Sparkles, desc: "Réalisation des visuels finaux." },
+              { step: "06", title: "Révisions", icon: RefreshCw, desc: "Ajustements et perfectionnements." },
+              { step: "07", title: "Livraison", icon: Package, desc: "Fichiers prêts à l'emploi." },
+            ].map((item) => {
+              const Icon = item.icon
+              return (
+                <div key={item.step} className="space-y-5">
+                  <div className="flex items-center gap-3">
+                    <span className="text-6xl md:text-7xl font-display font-bold text-muted-foreground/20">
+                      {item.step}
+                    </span>
+                    <Icon className="size-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-display font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </BookSection>
