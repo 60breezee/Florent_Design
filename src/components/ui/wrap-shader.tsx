@@ -1,12 +1,14 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Warp } from "@paper-design/shaders-react"
 
 export default function WarpShaderHero() {
+  const router = useRouter()
+
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id)
     if (!section) return
-
     section.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
@@ -47,7 +49,7 @@ export default function WarpShaderHero() {
           <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
             <button
               type="button"
-              onClick={() => scrollToSection("projects")}
+              onClick={() => router.push("/creations")}
               className="rounded-full border border-white/30 bg-white/20 px-8 py-4 font-medium text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/30"
             >
               Voir mes créations
