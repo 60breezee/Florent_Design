@@ -1,24 +1,28 @@
 ﻿"use client"
 
-import { useState } from "react"
+import { useState, type ComponentType } from "react"
 import dynamic from "next/dynamic"
 import {
   Briefcase,
+  Eye,
+  Fingerprint,
   Github,
   Home as HomeIcon,
   ImageIcon,
+  Image,
+  Layout,
   Linkedin,
   Mail,
   MessageCircle,
+  Package,
   Palette,
   Pen,
+  Play,
   RefreshCw,
   Search,
+  Share2,
   Sparkles,
   Twitter,
-  Layout,
-  Package,
-  Rocket,
 } from "lucide-react"
 import { AnimeNavBar } from "@/components/ui/anime-navbar"
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
@@ -61,6 +65,21 @@ const navItems = [
   { name: "Créations", url: "/creations", icon: Briefcase },
   { name: "Visuels", url: "#visuals", icon: ImageIcon },
   { name: "Contact", url: "#contact", icon: MessageCircle },
+]
+
+const servicesList: Array<{
+  num: string
+  title: string
+  icon: ComponentType<{ className?: string }>
+  desc: string
+}> = [
+  { num: "01", title: "Identité visuelle", icon: Eye, desc: "Logos, chartes graphiques, univers de marque." },
+  { num: "02", title: "Logo Design", icon: Fingerprint, desc: "Création de logos uniques et mémorables." },
+  { num: "03", title: "Branding", icon: Palette, desc: "Stratégie de marque et positionnement visuel." },
+  { num: "04", title: "Affiches", icon: Image, desc: "Affiches événementielles, culturelles et publicitaires." },
+  { num: "05", title: "Réseaux sociaux", icon: Share2, desc: "Visuels pour vos campagnes social media." },
+  { num: "06", title: "Packaging", icon: Package, desc: "Design d'emballages et mockups produits." },
+  { num: "07", title: "Motion Design", icon: Play, desc: "Animations graphiques et vidéo." },
 ]
 
 export default function Home() {
@@ -189,7 +208,7 @@ export default function Home() {
       </BookSection>
 
       <BookSection id="services" className="relative py-32 px-6" flipFrom="right">
-        <div className="max-w-6xl mx-auto space-y-16">
+        <div className="max-w-6xl mx-auto space-y-20">
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.4em] text-muted-foreground">
               Mes services
@@ -198,25 +217,31 @@ export default function Home() {
               Ce que je vous propose
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-12">
-            {[
-              { title: "Identité visuelle", desc: "Logos, chartes graphiques, univers de marque." },
-              { title: "Logo Design", desc: "Création de logos uniques et mémorables." },
-              { title: "Branding", desc: "Stratégie de marque et positionnement visuel." },
-              { title: "Affiches", desc: "Affiches événementielles, culturelles et publicitaires." },
-              { title: "Réseaux sociaux", desc: "Visuels pour vos campagnes social media." },
-              { title: "Packaging", desc: "Design d'emballages et mockups produits." },
-              { title: "Motion Design", desc: "Animations graphiques et vidéo." },
-            ].map((service) => (
-              <div key={service.title} className="space-y-3">
-                <h3 className="text-3xl md:text-4xl font-display font-semibold">
-                  {service.title}
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {service.desc}
-                </p>
-              </div>
-            ))}
+          <div className="space-y-16">
+            {servicesList.map((s, i) => {
+              const Icon = s.icon
+              return (
+                <div
+                  key={s.num}
+                  className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 md:gap-16 items-start border-b border-border/20 pb-16 last:border-0 last:pb-0"
+                >
+                  <div className="flex items-center gap-4 md:flex-col md:items-start md:sticky md:top-32">
+                    <span className="text-7xl md:text-9xl font-display font-bold leading-none text-muted-foreground/15 select-none">
+                      {s.num}
+                    </span>
+                    <Icon className="size-8 md:size-10 text-primary shrink-0" />
+                  </div>
+                  <div className="space-y-4 pt-1 md:pt-4">
+                    <h3 className="text-3xl md:text-5xl font-display font-semibold">
+                      {s.title}
+                    </h3>
+                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+                      {s.desc}
+                    </p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </BookSection>
